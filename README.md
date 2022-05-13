@@ -127,6 +127,7 @@ On Inside Server
 ./uc -f 1mb.test -ip <IP_OF_OUTSIDE> 9001 -v
 ```
 
+These commands will, on the "inside" server, get the file ./test/1mb.test, which contains 1MB+ of randomly generated data and transmit it in 16kB chunks across the diode with a 1 second pause in between chunks. Once the entire file is complete, the program will exit. On the "outside" server, the program will listen for the 16kB chunks, assemble them into a file ./1mb.test. This test can be verified by doing a diff on the two files. They should max exactly. 
 
 
 
